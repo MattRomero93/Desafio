@@ -1,0 +1,184 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    height:70px;
+    background-color: rgb(252, 251, 247);
+    align-items: center;
+    padding: 0px;
+    font-weight: 900;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-img {
+    height: 60px;
+    margin: 0px;
+    margin-left: 40%;
+    padding: 0;
+}
+
+nav a {
+    font-weight: 700;
+    padding-right: 20px;
+    --colorTexto: #49454533;
+}
+
+nav a:hover {
+    color: #c471ed;
+}
+
+body {
+    background: #12c2e9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to left,
+        #f64f59,
+        #c471ed,
+        #12c2e9
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #f64f59,
+        #c471ed,
+        #12c2e9
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: "Heebo", sans-serif;
+    --colorTexto: #313030a3;
+}
+
+form {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    border-radius: 25px
+    margin: 20px;
+    padding: 20px 10px;
+    width: 50%;
+    height: auto;
+}
+
+form .grupo {
+    position: relative;
+    margin: 25px;
+}
+input,
+textarea {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 10px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTexto);
+    resize: none;
+}
+
+button {
+    background: #12c2e9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to left,
+        #f64f59,
+        #c471ed,
+        #12c2e9
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #f64f59,
+        #c471ed,
+        #12c2e9
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: block;
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    color: #c471ed;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: #2196f3;
+}
+
+label {
+    color: var(--colorTexto);
+    font-size: 15px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.3s ease all;
+    pointer-events: none;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+input:focus ~ .barra::before,
+textarea:focus ~ .barra::before {
+    width: 100%;
+}
+
+.barra::before {
+    content: "";
+    height: 3px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to left, #f64f59, #c471ed, #12c2e9);
+    transition: 0.3s ease all;
+    left: 0;
+}
+
+@media screen and (max-width: 1100px) {
+    form {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 600px) {
+    form {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 450px) {
+    form {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 300px) {
+    form {
+        width: 90%;
+    }
+}
